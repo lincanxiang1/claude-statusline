@@ -1,0 +1,33 @@
+{
+  "name": "claude-statusline",
+  "version": "0.1.0",
+  "description": "Claude Code 状态栏插件：显示上下文使用率、当前模型、最近修改文件的完整路径",
+  "author": {
+    "name": "lin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "statusline",
+    "status-line",
+    "hooks",
+    "plugin"
+  ],
+  "statusLine": {
+    "type": "command",
+    "command": "python -X utf8 \"${CLAUDE_PLUGIN_ROOT}/scripts/statusline.py\""
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -X utf8 \"${CLAUDE_PLUGIN_ROOT}/hooks/track_modified.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
