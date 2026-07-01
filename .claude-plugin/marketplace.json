@@ -1,0 +1,14 @@
+{
+  "name": "claude-statusline",
+  "owner": {
+    "name": "lincanxiang1",
+    "url": "https://github.com/lincanxiang1"
+  },
+  "plugins": [
+    {
+      "name": "claude-statusline",
+      "source": ".",
+      "description": "Claude Code 状态栏插件：显示上下文使用率、当前模型、最近修改文件的完整路径"
+    }
+  ]
+}
